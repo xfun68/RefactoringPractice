@@ -4,27 +4,27 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
 
     private String title;
-    private Price priceCode;
+    private Price price;
 
-    public Movie(String title, int priceCode) {
+    public Movie(String title, int price) {
         this.title = title;
-        setPriceCode(priceCode);
+        setPriceCode(price);
     }
 
     public int getPriceCode() {
-        return priceCode.getPriceCode();
+        return price.getPriceCode();
     }
 
     public void setPriceCode(int priceCode) {
         switch (priceCode) {
             case Movie.REGULAR:
-                this.priceCode = new RegularPrice();
+                this.price = new RegularPrice();
                 break;
             case Movie.NEW_RELEASE:
-                this.priceCode = new NewReleasePrice();
+                this.price = new NewReleasePrice();
                 break;
             case Movie.CHILDREN:
-                this.priceCode = new ChildrenPrice();
+                this.price = new ChildrenPrice();
                 break;
         }
     }

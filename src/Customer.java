@@ -38,11 +38,11 @@ public class Customer {
         return result;
     }
 
-    private int getFrequentRenterPoints(Rental each) {
+    private int getFrequentRenterPoints(Rental aRental) {
         int frequentRenterPoints = 0;
         frequentRenterPoints++;
 
-        if (each.getMovie().getPriceCode() == Movie.NEW_RELEASE && each.getDaysRented() > 1)
+        if (aRental.getMovie().getPriceCode() == Movie.NEW_RELEASE && aRental.getDaysRented() > 1)
             frequentRenterPoints++;
         return frequentRenterPoints;
     }

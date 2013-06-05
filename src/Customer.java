@@ -27,7 +27,7 @@ public class Customer {
             double thisAmount = 0;
             Rental each = rentals.nextElement();
 
-            thisAmount = each.amountFor();
+            thisAmount = each.getCharge();
 
             frequentRenterPoints++;
 

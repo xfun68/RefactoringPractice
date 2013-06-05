@@ -42,4 +42,13 @@ public class Movie {
         }
         return result;
     }
+
+    int getFrequentRenterPoints(int daysRented) {
+        int frequentRenterPoints = 1;
+
+        if (getPriceCode() == NEW_RELEASE && daysRented > 1)
+            frequentRenterPoints++;
+
+        return frequentRenterPoints;
+    }
 }
